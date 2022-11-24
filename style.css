@@ -1,29 +1,33 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    background-image: url(img/bg.svg);
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./img/bg.svg);
     background-color: #141212;
-    /* background-repeat: no-repeat; */
+    background-position: center center;
+    background-repeat: no-repeat;  
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
 }
 
-main {
-    background-image: url(./img/Luz.svg);
+main {  
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
 
-
 main img {
     width: 50px;
     height: 50px;
 }
+
 .container {
-    height: 100%;
     background-color: #1E1E1E;
-    width: 80%;
+    width: fit-content;
 }
 
 .calendario {
@@ -36,12 +40,6 @@ main img {
     font-size: 25px;
 }
 
-.sec_data {
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-}
-
 section .data h3 {
     color: #F7DD43;
 }
@@ -50,62 +48,24 @@ section .data {
     border: solid 1px #338AF3;
     border-radius: 5px;
     color: #ffff;
-}
-section .data .paddingData {
     gap: 15px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -10px 10px
 }
 
-.jogos {
+.jogos .div_jogos {
+    width: 300px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.jogos div {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     color: #ffff;
-    padding-top: 40px;
-    padding-bottom: 25px;
+    padding:20px;
     border-bottom: solid 1px #323238;
-    width: 90%;
 }
 
 .jogos div p {
     font-size: 30px;
     font-weight: 700;
-}
-
-.jogos .div_jogosTres {
-    border: unset;
-}
-
-.containerDois {
-    height: 100%;
-    background-color: #1E1E1E;
-    width: 80%;
-}
-
-@media (min-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main {
-        display: flex;
-        width: 50%;
-        flex-direction: row;
-    }
-
-    .jogos div {
-        justify-content: space-evenly;
-    }
-
 }
